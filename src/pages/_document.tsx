@@ -1,9 +1,9 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Head, Html, Main, NextScript } from 'next/document';
 
 const Document = () => (
-  <Html lang="en">
+  <Html lang='en'>
     <Head />
-    <body>
+    <body className='bg-gray-50 antialiased'>
       <Main />
       <NextScript />
     </body>
