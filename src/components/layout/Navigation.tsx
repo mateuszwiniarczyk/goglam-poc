@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 const links = [
-  { href: '/', label: 'Products' },
-  { href: '/', label: 'Blog' },
-  { href: '/', label: 'Contact' },
+  { href: '/', label: 'products' },
+  { href: '/', label: 'blog' },
+  { href: '/', label: 'about us' },
+  { href: '/', label: 'locate us' },
 ];
 
 interface NavigationProps {

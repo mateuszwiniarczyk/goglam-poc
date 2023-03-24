@@ -14,7 +14,7 @@ const montserrat = Montserrat({
 
 export const Layout = ({ children }: LayoutProps) => (
   <div
-    className={`${montserrat.variable} font-sans min-h-screen flex flex-col`}
+    className={`${montserrat.variable} font-sans min-h-screen flex flex-col h-[3000px]`}
   >
     <Header />
     <main className='px-4 container mx-auto flex-1'>{children}</main>
