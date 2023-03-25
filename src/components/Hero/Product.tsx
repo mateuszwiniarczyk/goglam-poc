@@ -28,7 +28,7 @@ export const Product = ({ scrollYProgress, item }: ProductProps) => {
         'relative py-14 after:absolute after:left-0 after:top-0 after:-z-10 after:block after:aspect-square after:w-full after:rounded-full'
       )}
     >
-      <Image src={item.img} alt='' />
+      <Image src={item.img} alt='' placeholder='blur' priority />
     </motion.div>
   );
 };
