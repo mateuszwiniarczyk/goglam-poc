@@ -12,10 +12,10 @@ export const Hero = () => {
 
   return (
     <div
-      className='text-center items-center flex flex-col justify-center'
+      className='flex flex-col items-center justify-center text-center'
       ref={heroWrapperRef}
     >
-      <h1 className='text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-6'>
+      <h1 className='mb-6 text-4xl font-bold md:text-5xl xl:text-6xl 2xl:text-7xl'>
         Unleash Your Glow
       </h1>
       <p className='mb-8 md:text-lg'>
@@ -23,7 +23,7 @@ export const Hero = () => {
       </p>
       <button
         type='button'
-        className='text-sm bg-black border border-black text-white flex justify-center items-center px-12 py-5 rounded-full font-bold hover:bg-transparent hover:text-black transition'
+        className='flex items-center justify-center rounded-full border border-black bg-black px-12 py-5 text-sm font-bold text-white transition hover:bg-white hover:text-black'
       >
         Shop now
       </button>

@@ -3,7 +3,7 @@ import { Head, Html, Main, NextScript } from 'next/document';
 const Document = () => (
   <Html lang='en'>
     <Head />
-    <body className='bg-gray-100 antialiased overflow-x-hidden'>
+    <body className='overflow-x-hidden bg-gray-100 antialiased'>
       <Main />
       <NextScript />
     </body>

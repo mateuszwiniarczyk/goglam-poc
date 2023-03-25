@@ -18,9 +18,9 @@ export const Actions = ({ isNavVisible, handleNavToggle }: ActionsProps) => (
       onClick={handleNavToggle}
     >
       {isNavVisible ? (
-        <CloseIcon className='w-8 h-8' />
+        <CloseIcon className='h-8 w-8' />
       ) : (
-        <MenuIcon className='w-8 h-8' />
+        <MenuIcon className='h-8 w-8' />
       )}
     </button>
   </div>

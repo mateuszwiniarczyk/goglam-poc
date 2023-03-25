@@ -29,7 +29,7 @@ export const Navigation = ({ isNavVisible }: NavigationProps) => {
         animate={isNavVisible ? 'open' : 'closed'}
         variants={!matches ? variants : {}}
         transition={{ type: 'tween' }}
-        className='fixed inset-0 -translate-x-full bg-white flex flex-col items-center justify-center gap-8 md:static md:inset-auto md:bg-transparent md:flex-row md:justify-start font-medium text-lg'
+        className='fixed inset-0 flex -translate-x-full flex-col items-center justify-center gap-8 bg-white text-lg font-medium md:static md:inset-auto md:flex-row md:justify-start md:bg-transparent'
       >
         {links.map(({ href, label }) => (
           <li key={label}>

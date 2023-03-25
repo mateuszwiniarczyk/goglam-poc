@@ -8,7 +8,7 @@ interface ProductProps {
   item: {
     img: StaticImageData;
     targetAnimationValues: string[];
-    id: number;
+    id: string;
     className?: string;
   };
 }
@@ -25,7 +25,7 @@ export const Product = ({ scrollYProgress, item }: ProductProps) => {
       style={{ translateX }}
       className={clsxm(
         item.className,
-        'py-14 after:aspect-square after:block after:absolute after:left-0 after:w-full after:-z-10 after:top-0 after:rounded-full relative'
+        'relative py-14 after:absolute after:left-0 after:top-0 after:-z-10 after:block after:aspect-square after:w-full after:rounded-full'
       )}
     >
       <Image src={item.img} alt='' />

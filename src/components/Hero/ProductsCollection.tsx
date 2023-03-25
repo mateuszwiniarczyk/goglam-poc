@@ -1,4 +1,5 @@
 import { MotionValue } from 'framer-motion';
+import { nanoid } from 'nanoid';
 
 import { Product } from '@/components/Hero/Product';
 import CoconutWaterImg from '~/images/coconut-water.png';
@@ -13,31 +14,31 @@ interface ProductsCollectionProps {
 
 const products = [
   {
-    id: 0,
+    id: nanoid(),
     img: CoconutWaterImg,
     targetAnimationValues: ['0%', '-500%'],
     className: 'after:bg-emerald-300',
   },
   {
-    id: 1,
+    id: nanoid(),
     img: GrapefruitWaterImg,
     targetAnimationValues: ['0%', '-200%'],
     className: 'after:bg-red-300',
   },
   {
-    id: 2,
+    id: nanoid(),
     img: LavenderWaterImg,
     targetAnimationValues: ['0%', '0%'],
     className: 'after:bg-purple-300',
   },
   {
-    id: 3,
+    id: nanoid(),
     img: RoseWaterImg,
     targetAnimationValues: ['0%', '200%'],
     className: 'after:bg-pink-200',
   },
   {
-    id: 4,
+    id: nanoid(),
     img: SeaWaterImg,
     targetAnimationValues: ['0%', '500%'],
     className: 'after:bg-blue-300',
@@ -47,7 +48,7 @@ const products = [
 export const ProductsCollection = ({
   scrollYProgress,
 }: ProductsCollectionProps) => (
-  <div className='hidden md:flex md:gap-6 md:mt-16'>
+  <div className='hidden md:mt-16 md:flex md:gap-6'>
     {products.map((item) => (
       <Product scrollYProgress={scrollYProgress} item={item} key={item.id} />
     ))}

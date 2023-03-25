@@ -14,11 +14,11 @@ const montserrat = Montserrat({
 
 export const Layout = ({ children }: LayoutProps) => (
   <div
-    className={`${montserrat.variable} font-sans min-h-screen flex flex-col h-[3000px]`}
+    className={`${montserrat.variable} flex h-[3000px] min-h-screen flex-col font-sans`}
   >
     <Header />
-    <main className='px-4 container mx-auto flex-1'>{children}</main>
-    <footer className='py-4 md:py-5 text-center'>
+    <main className='container mx-auto flex-1 px-4'>{children}</main>
+    <footer className='py-4 text-center md:py-5'>
       <span className='text-gray-500'>
         &copy; 2023 Goglam. All rights reserved.
       </span>

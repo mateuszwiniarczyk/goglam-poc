@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <header>
-      <div className='mx-auto container px-4 py-4 md:py-8 flex items-center justify-between gap-2 mb-12 md:mb-16 '>
+      <div className='container mx-auto mb-12 flex items-center justify-between gap-2 px-4 py-4 md:mb-16 md:py-8 '>
         <Logo />
         <Navigation isNavVisible={isNavVisible} />
         <Actions
