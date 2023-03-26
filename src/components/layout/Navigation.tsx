@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
+import { ActiveLink } from '@/components/layout/ActiveLink';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 const links = [
-  { href: '/', label: 'products' },
-  { href: '/', label: 'blog' },
-  { href: '/', label: 'about us' },
-  { href: '/', label: 'locate us' },
+  { href: '/', label: 'home' },
+  { href: '/products', label: 'products' },
+  { href: '/blog', label: 'blog' },
+  { href: '/about-us', label: 'about us' },
+  { href: '/locate-us', label: 'locate us' },
 ];
 
 interface NavigationProps {
@@ -29,11 +30,17 @@ export const Navigation = ({ isNavVisible }: NavigationProps) => {
         animate={isNavVisible ? 'open' : 'closed'}
         variants={!matches ? variants : {}}
         transition={{ type: 'tween' }}
-        className='fixed inset-0 flex -translate-x-full flex-col items-center justify-center gap-8 bg-white text-lg font-semibold md:static md:inset-auto md:flex-row md:justify-start md:bg-transparent'
+        className='fixed inset-0 z-10 flex -translate-x-full flex-col items-center justify-center gap-8 bg-white text-lg font-semibold md:static md:inset-auto md:flex-row md:justify-start md:bg-transparent'
       >
         {links.map(({ href, label }) => (
           <li key={label}>
-            <Link href={href}>{label}</Link>
+            <ActiveLink
+              href={href}
+              activeClassName='after:scale-x-100'
+              className='relative after:block after:scale-x-0 after:border-b-2 after:border-black after:transition-transform after:ease-in-out hover:after:scale-x-100'
+            >
+              {label}
+            </ActiveLink>
           </li>
         ))}
       </motion.ul>
