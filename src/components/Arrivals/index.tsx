@@ -24,11 +24,13 @@ export const Arrivals = () => {
         transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
       }}
     >
-      <div className='mb-10 flex items-end justify-between gap-5'>
-        <h2 className='text-2xl font-semibold md:text-4xl'>This just in.</h2>
+      <div className='mb-10 flex flex-col items-end justify-between gap-5 md:mb-24 md:flex-row'>
+        <h2 className='mr-auto text-2xl font-semibold md:mr-0 md:text-4xl'>
+          This just in.
+        </h2>
         <Link
           href='/'
-          className='font-semibold underline underline-offset-4 md:text-lg'
+          className='text-sm font-semibold underline underline-offset-4 md:text-lg'
         >
           See our products
         </Link>
