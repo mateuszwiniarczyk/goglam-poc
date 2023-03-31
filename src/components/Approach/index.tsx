@@ -23,26 +23,32 @@ export const Approach = () => {
         <div className='flex w-60 flex-none flex-col md:w-auto md:flex-1'>
           <LeafIcon className='mb-5 h-12 w-12' />
           <h3 className='mb-2.5 text-lg font-semibold'>Nature inspired</h3>
-          <p>
+          <p className='text-gray-700'>
             We consider our responsibility to the environment in all aspects
           </p>
         </div>
         <div className='flex w-60 flex-none flex-col md:w-auto md:flex-1'>
           <RabbitIcon className='mb-5 h-12 w-12' />
           <h3 className='mb-2.5 text-lg font-semibold'>Animal cruelty-free</h3>
-          <p>Tested by people definitely not on animals</p>
+          <p className='text-gray-700'>
+            Tested by people definitely not on animals
+          </p>
         </div>
         <div className='flex w-60 flex-none flex-col md:w-auto md:flex-1'>
           <ShowerIcon className='mb-5 h-12 w-12' />
           <h3 className='mb-2.5 text-lg font-semibold'>No added parabens</h3>
-          <p>No added parabens, phthalates or aluminum</p>
+          <p className='text-gray-700'>
+            No added parabens, phthalates or aluminum
+          </p>
         </div>
         <div className='flex w-60 flex-none flex-col md:w-auto md:flex-1'>
           <DiversityIcon className='mb-5 h-12 w-12' />
           <h3 className='mb-2.5 text-lg font-semibold'>
             Business with a purpose
           </h3>
-          <p>We make business decisions with people in mind</p>
+          <p className='text-gray-700'>
+            We make business decisions with people in mind
+          </p>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { Montserrat } from 'next/font/google';
 
+import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 
 interface LayoutProps {
@@ -18,10 +19,6 @@ export const Layout = ({ children }: LayoutProps) => (
   >
     <Header />
     <main className='container mx-auto flex-1 px-4'>{children}</main>
-    <footer className='mt-16 py-4 text-center md:mt-32 md:py-5'>
-      <span className='text-gray-500'>
-        &copy; 2023 Goglam. All rights reserved.
-      </span>
-    </footer>
+    <Footer />
   </div>
 );

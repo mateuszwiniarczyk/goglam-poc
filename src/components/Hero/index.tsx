@@ -18,7 +18,7 @@ export const Hero = () => {
       <h1 className='mb-6 text-4xl font-bold md:text-5xl xl:text-6xl 2xl:text-7xl'>
         Unleash Your Glow
       </h1>
-      <p className='mb-8 md:text-lg'>
+      <p className='mb-8 text-gray-700 md:text-lg'>
         Explore our collection and find your go-to beauty products today
       </p>
       <button
