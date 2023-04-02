@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 
 import { Product } from '@/components/Product';
-import { StyledLink } from '@/components/StyledLink';
+import { SectionHeader } from '@/components/SectionHeader';
 import { Swiper, SwiperSlide } from '@/components/Swiper';
 import ArrivalItem1 from '~/images/arrivals-1.png';
 import ArrivalItem2 from '~/images/arrivals-2.png';
@@ -43,18 +43,12 @@ export const Favourites = () => {
         transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
       }}
     >
-      <div className='mb-10 flex flex-col items-end justify-between gap-5 md:mb-24 md:flex-row'>
-        <h2 className='mr-auto text-2xl font-semibold md:mr-0 md:text-4xl'>
-          Some of our favourite
-        </h2>
-        <StyledLink
-          href='/products'
-          className='text-sm md:text-lg'
-          variant='underline'
-        >
-          See our products
-        </StyledLink>
-      </div>
+      <SectionHeader
+        heading='Some of our favourite'
+        href='/products'
+        linkLabel='See our products'
+      />
+
       <Swiper breakpoints={swiperBreakpoints} spaceBetween={20}>
         <SwiperSlide>
           <Product img={ArrivalItem1} />
