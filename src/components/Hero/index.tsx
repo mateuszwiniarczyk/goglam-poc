@@ -1,6 +1,8 @@
 import { useScroll } from 'framer-motion';
+import Link from 'next/link';
 import { useRef } from 'react';
 
+import { Button } from '@/components/Button';
 import { ProductsCollection } from '@/components/Hero/ProductsCollection';
 
 export const Hero = () => {
@@ -21,12 +23,10 @@ export const Hero = () => {
       <p className='mb-8 text-gray-700 md:text-lg'>
         Explore our collection and find your go-to beauty products today
       </p>
-      <button
-        type='button'
-        className='flex items-center justify-center rounded-full border border-black bg-black px-12 py-5 text-sm font-bold text-white transition hover:bg-white hover:text-black'
-      >
-        Shop now
-      </button>
+      <Link href='/products'>
+        <Button>Shop now</Button>
+      </Link>
+
       <ProductsCollection scrollYProgress={scrollYProgress} />
     </div>
   );

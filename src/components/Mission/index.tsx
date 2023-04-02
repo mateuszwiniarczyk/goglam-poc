@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
+import { Button } from '@/components/Button';
 import MissionImg from '~/images/mission.jpg';
 
 export const Mission = () => {
@@ -28,12 +30,9 @@ export const Mission = () => {
               don&#39;t have to.
             </p>
 
-            <button
-              type='button'
-              className='flex items-center justify-center rounded-full border border-black bg-black px-12 py-5 text-sm font-bold text-white transition hover:bg-white hover:text-black'
-            >
-              Shop now
-            </button>
+            <Link href='/products'>
+              <Button>Shop now</Button>
+            </Link>
           </div>
         </div>
       </div>
