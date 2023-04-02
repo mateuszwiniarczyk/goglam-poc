@@ -48,7 +48,7 @@ const products = [
 export const ProductsCollection = ({
   scrollYProgress,
 }: ProductsCollectionProps) => (
-  <div className='hidden md:mt-16 md:flex md:gap-6'>
+  <div className='hidden md:mx-auto md:mt-16 md:flex md:max-w-6xl md:gap-5 lg:gap-8 xl:gap-10 2xl:gap-14'>
     {products.map((item) => (
       <Product scrollYProgress={scrollYProgress} item={item} key={item.id} />
     ))}

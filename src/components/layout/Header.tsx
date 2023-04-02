@@ -12,8 +12,8 @@ export const Header = () => {
   };
 
   return (
-    <header>
-      <div className='container mx-auto mb-12 flex items-center justify-between gap-2 px-4 py-4 md:mb-16 md:py-8 '>
+    <header className='fixed top-0 z-50 w-full bg-gray-50 shadow'>
+      <div className='container mx-auto flex items-center justify-between gap-2 px-4 py-4 md:py-8 '>
         <Logo />
         <Navigation isNavVisible={isNavVisible} />
         <Actions
