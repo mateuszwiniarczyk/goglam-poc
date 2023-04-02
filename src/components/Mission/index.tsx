@@ -15,15 +15,16 @@ export const Mission = () => {
           />
         </div>
 
-        <div className='relative flex items-center'>
-          <div className='max-w-lg py-8 sm:py-16 lg:py-24 2xl:py-32'>
+        <div className='relative flex items-center justify-center'>
+          <div className='max-w-lg py-8 sm:py-16 lg:py-24 2xl:py-48'>
             <h2 className='mb-5 text-2xl font-semibold sm:text-5xl'>
               Increase the peace
             </h2>
 
             <p className='mb-10 text-lg'>
-              Start your happy home revolution with our powerful friendly
-              products
+              Start your happy home revolution with our powerful products. We
+              spend a ton of time thinking about our products so that you
+              don&#39;t have to.
             </p>
 
             <button
