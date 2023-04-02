@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRef } from 'react';
 
 import { Button } from '@/components/Button';
-import { ProductsCollection } from '@/components/Hero/ProductsCollection';
+import { ProductsCollection } from '@/features/misc/components/Hero/ProductsCollection';
 
 export const Hero = () => {
   const heroWrapperRef = useRef(null);

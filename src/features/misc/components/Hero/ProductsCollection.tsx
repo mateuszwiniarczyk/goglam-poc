@@ -1,7 +1,7 @@
 import { MotionValue } from 'framer-motion';
 import { nanoid } from 'nanoid';
 
-import { Product } from '@/components/Hero/Product';
+import { Product } from '@/features/misc/components/Hero/Product';
 import CoconutWaterImg from '~/images/coconut-water.png';
 import GrapefruitWaterImg from '~/images/grapefruit-water.png';
 import LavenderWaterImg from '~/images/lavender-water.png';

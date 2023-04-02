@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 
 import { Product } from '@/components/Product';
-import { SectionHeader } from '@/components/SectionHeader';
 import { Swiper, SwiperSlide } from '@/components/Swiper';
+import { SectionHeader } from '@/features/misc/components/SectionHeader';
 import ArrivalItem1 from '~/images/arrivals-1.png';
 import ArrivalItem2 from '~/images/arrivals-2.png';
 import ArrivalItem3 from '~/images/arrivals-3.png';
@@ -29,7 +29,7 @@ const swiperBreakpoints = {
   },
 };
 
-export const Arrivals = () => {
+export const Favourites = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -44,7 +44,7 @@ export const Arrivals = () => {
       }}
     >
       <SectionHeader
-        heading='This just in'
+        heading='Some of our favourite'
         href='/products'
         linkLabel='See our products'
       />
@@ -54,25 +54,10 @@ export const Arrivals = () => {
           <Product img={ArrivalItem1} />
         </SwiperSlide>
         <SwiperSlide>
-          <Product img={ArrivalItem2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem3} />
-        </SwiperSlide>
-        <SwiperSlide>
           <Product img={ArrivalItem4} />
         </SwiperSlide>
         <SwiperSlide>
-          <Product img={ArrivalItem5} />
-        </SwiperSlide>
-        <SwiperSlide>
           <Product img={ArrivalItem3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem4} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem1} />
         </SwiperSlide>
         <SwiperSlide>
           <Product img={ArrivalItem5} />
@@ -81,7 +66,13 @@ export const Arrivals = () => {
           <Product img={ArrivalItem2} />
         </SwiperSlide>
         <SwiperSlide>
-          <Product img={ArrivalItem1} />
+          <Product img={ArrivalItem4} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product img={ArrivalItem2} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Product img={ArrivalItem5} />
         </SwiperSlide>
       </Swiper>
     </motion.section>

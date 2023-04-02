@@ -1,4 +1,4 @@
-import { SectionHeader } from '@/components/SectionHeader';
+import { SectionHeader } from '@/features/misc/components/SectionHeader';
 import DiversityIcon from '~/svg/diversity.svg';
 import LeafIcon from '~/svg/leaf.svg';
 import RabbitIcon from '~/svg/rabbit.svg';
