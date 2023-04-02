@@ -5,9 +5,10 @@ import ArrowForwardIcon from '~/svg/arrow_forward.svg';
 
 export const Newsletter = () => {
   return (
-    <section className='relative mt-32 w-full overflow-hidden rounded-3xl bg-gray-100 py-24 px-12 after:absolute after:-top-56 after:-left-32 after:h-96 after:w-96 after:rounded-full after:bg-yellow-300 md:p-24'>
+    <section className='relative mt-24 w-full overflow-hidden rounded-3xl bg-gray-100 py-24 px-12 after:absolute after:-top-56 after:-left-32 after:h-96 after:w-96 after:rounded-full after:bg-yellow-300 md:mt-32 md:p-24'>
       <Image
         src={NewsletterImg}
+        placeholder='blur'
         alt=''
         width='256'
         height='288'

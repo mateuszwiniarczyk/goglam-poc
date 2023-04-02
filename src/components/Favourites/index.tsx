@@ -35,7 +35,7 @@ export const Favourites = () => {
 
   return (
     <motion.section
-      className='mt-32 w-full'
+      className='mt-24 w-full md:mt-32'
       ref={ref}
       style={{
         transform: isInView ? 'none' : 'translateX(-100%)',

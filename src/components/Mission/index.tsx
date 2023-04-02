@@ -4,12 +4,13 @@ import MissionImg from '~/images/mission.jpg';
 
 export const Mission = () => {
   return (
-    <section className='mt-32'>
+    <section className='mt-24 md:mt-32'>
       <div className='grid grid-cols-1 gap-8 sm:gap-16 lg:grid-cols-2 lg:gap-24'>
         <div className='relative h-64 sm:h-80 lg:h-full'>
           <Image
             alt=''
             src={MissionImg}
+            placeholder='blur'
             fill
             className='h-full w-full rounded-3xl object-cover'
           />
