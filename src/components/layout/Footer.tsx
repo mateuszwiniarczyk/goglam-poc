@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { StyledLink } from '@/components/StyledLink';
 import FacebookIcon from '~/svg/facebook.svg';
 import InstagramIcon from '~/svg/instagram.svg';
 import PinterestIcon from '~/svg/pinterest.svg';
@@ -11,43 +12,43 @@ export const Footer = () => {
       <div className='container mx-auto grid grid-cols-1 gap-8 p-4 sm:grid-cols-2 md:grid-cols-4'>
         <div className='text-left'>
           <p className='mb-5 text-2xl font-bold'>our business</p>
-          <ul className='flex flex-col gap-2.5 text-sm font-medium'>
+          <ul className='flex flex-col items-start gap-2.5 text-sm font-medium'>
             <li>
-              <Link href='/'>transparency</Link>
+              <StyledLink href='/'>transparency</StyledLink>
             </li>
             <li>
-              <Link href='/'>our mission</Link>
+              <StyledLink href='/'>our mission</StyledLink>
             </li>
             <li>
-              <Link href='/'>promise and values</Link>
+              <StyledLink href='/'>promise and values</StyledLink>
             </li>
           </ul>
         </div>
         <div className='text-left'>
           <p className='mb-5 text-2xl font-bold'>partnerships</p>
-          <ul className='flex flex-col gap-2.5 text-sm font-medium'>
+          <ul className='flex flex-col items-start gap-2.5 text-sm font-medium'>
             <li>
-              <Link href='/'>press media</Link>
+              <StyledLink href='/'>press media</StyledLink>
             </li>
             <li>
-              <Link href='/'>careers</Link>
+              <StyledLink href='/'>careers</StyledLink>
             </li>
             <li>
-              <Link href='/'>partners</Link>
+              <StyledLink href='/'>partners</StyledLink>
             </li>
           </ul>
         </div>
         <div className='text-left'>
           <p className='mb-5 text-2xl font-bold'>our support</p>
-          <ul className='flex flex-col gap-2.5 text-sm font-medium'>
+          <ul className='flex flex-col items-start gap-2.5 text-sm font-medium'>
             <li>
-              <Link href='/'>contact us</Link>
+              <StyledLink href='/'>contact us</StyledLink>
             </li>
             <li>
-              <Link href='/'>FAQ</Link>
+              <StyledLink href='/'>FAQ</StyledLink>
             </li>
             <li>
-              <Link href='/'>locate us</Link>
+              <StyledLink href='/'>locate us</StyledLink>
             </li>
           </ul>
         </div>

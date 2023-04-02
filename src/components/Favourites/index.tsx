@@ -1,9 +1,9 @@
 import { useInView } from 'framer-motion';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useRef } from 'react';
 
 import { Product } from '@/components/Product';
+import { StyledLink } from '@/components/StyledLink';
 import { Swiper, SwiperSlide } from '@/components/Swiper';
 import ArrivalItem1 from '~/images/arrivals-1.png';
 import ArrivalItem2 from '~/images/arrivals-2.png';
@@ -47,12 +47,13 @@ export const Favourites = () => {
         <h2 className='mr-auto text-2xl font-semibold md:mr-0 md:text-4xl'>
           Some of our favourite
         </h2>
-        <Link
-          href='/'
-          className='text-sm font-semibold underline underline-offset-4 md:text-lg'
+        <StyledLink
+          href='/products'
+          className='text-sm md:text-lg'
+          variant='underline'
         >
           See our products
-        </Link>
+        </StyledLink>
       </div>
       <Swiper breakpoints={swiperBreakpoints} spaceBetween={20}>
         <SwiperSlide>

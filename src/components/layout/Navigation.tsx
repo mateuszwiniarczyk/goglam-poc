@@ -34,11 +34,7 @@ export const Navigation = ({ isNavVisible }: NavigationProps) => {
       >
         {links.map(({ href, label }) => (
           <li key={label}>
-            <ActiveLink
-              href={href}
-              activeClassName='after:scale-x-100'
-              className='relative after:block after:scale-x-0 after:border-b-2 after:border-black after:transition-transform after:ease-in-out hover:after:scale-x-100'
-            >
+            <ActiveLink href={href} activeClassName='after:scale-x-100'>
               {label}
             </ActiveLink>
           </li>

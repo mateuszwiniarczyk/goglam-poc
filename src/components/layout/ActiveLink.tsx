@@ -1,6 +1,8 @@
-import Link, { LinkProps } from 'next/link';
+import { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+
+import { StyledLink } from '@/components/StyledLink';
 
 type ActiveLinkProps = LinkProps & {
   className?: string;
@@ -30,8 +32,8 @@ export const ActiveLink = ({
   }, [props.href, asPath, activeClassName, className]);
 
   return (
-    <Link className={computedClassName} {...props}>
+    <StyledLink className={computedClassName} {...props}>
       {children}
-    </Link>
+    </StyledLink>
   );
 };

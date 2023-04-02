@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+import { StyledLink } from '@/components/StyledLink';
 import DiversityIcon from '~/svg/diversity.svg';
 import LeafIcon from '~/svg/leaf.svg';
 import RabbitIcon from '~/svg/rabbit.svg';
@@ -12,12 +11,13 @@ export const Approach = () => {
         <h2 className='mr-auto text-2xl font-semibold md:mr-0 md:text-4xl'>
           Our fresh approach
         </h2>
-        <Link
-          href='/'
-          className='text-sm font-semibold underline underline-offset-4 md:text-lg'
+        <StyledLink
+          href='/products'
+          className='text-sm md:text-lg'
+          variant='underline'
         >
           See our products
-        </Link>
+        </StyledLink>
       </div>
       <div className='flex snap-x justify-between gap-5 overflow-x-auto pb-5 md:gap-10 lg:gap-14 2xl:gap-20 '>
         <div className='flex w-60 flex-none snap-center flex-col md:w-auto md:flex-1'>
