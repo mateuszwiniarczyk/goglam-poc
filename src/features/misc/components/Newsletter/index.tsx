@@ -23,7 +23,7 @@ export const Newsletter = () => {
           <input
             type='email'
             placeholder='email address'
-            className='w-full bg-transparent text-sm font-medium leading-none outline-none'
+            className='w-full border-none bg-transparent text-sm font-medium leading-none focus:ring-0'
           />
 
           <button
