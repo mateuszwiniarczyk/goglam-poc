@@ -4,7 +4,7 @@ import ListIcon from '~/svg/list.svg';
 const sortBy = ['Title, DESC', 'Title, ASC', 'Price, DESC', 'Price, ASC'];
 
 export const Toolbar = () => (
-  <div className='col-span-3 flex items-center justify-end gap-5'>
+  <div className='col-span-1 flex items-center justify-end gap-5 sm:col-span-2 xl:col-span-3'>
     {/* SHOWING RESULTS AS GRID OR LIST */}
     <div className='flex divide-x divide-gray-100 rounded border border-gray-100'>
       <button className='inline-flex h-10 w-10 items-center justify-center text-gray-600 transition hover:bg-gray-50 hover:text-gray-700'>

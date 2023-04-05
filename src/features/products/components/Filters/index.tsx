@@ -6,7 +6,7 @@ const cosmeticBrands = ['Loreal', 'Maybelline', 'Revlon', 'Lancome'];
 
 export const Filters = () => {
   return (
-    <div className='col-span-1 space-y-2'>
+    <div className='col-span-1 space-y-2 lg:col-span-1'>
       <Filter title='Product Categories'>
         <div className='flex flex-col items-start gap-2.5'>
           {productCategories.map((category) => (
