@@ -6,7 +6,7 @@ interface FilterProps {
 }
 
 export const Filter = ({ title, children }: FilterProps) => (
-  <details className='group overflow-hidden' open>
+  <details className='group overflow-hidden'>
     <summary className='flex cursor-pointer items-center justify-between gap-2 text-gray-900 transition'>
       <span className='text-sm font-medium'>{title}</span>
 

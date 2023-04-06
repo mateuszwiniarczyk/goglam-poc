@@ -1,12 +1,17 @@
-import { Filter } from '@/features/products/components/Filters/Filter';
+import { motion } from 'framer-motion';
 
+import { Filter } from '@/features/products/components/Filters/Filter';
+import { clsxm } from '@/lib/clsxm';
 const productCategories = ['makeup', 'skincare', 'bath & body', 'hair'];
 const colors = ['black', 'yellow', 'green', 'pink', 'gray'];
 const cosmeticBrands = ['Loreal', 'Maybelline', 'Revlon', 'Lancome'];
 
-export const Filters = () => {
+export const Filters = ({ filtersOpen }: { filtersOpen: boolean }) => {
   return (
-    <div className='col-span-1 space-y-2 lg:col-span-1'>
+    <motion.div
+      layout='size'
+      className={clsxm('col-span-1 space-y-2', !filtersOpen && 'hidden')}
+    >
       <Filter title='Product Categories'>
         <div className='flex flex-col items-start gap-2.5'>
           {productCategories.map((category) => (
@@ -77,6 +82,6 @@ export const Filters = () => {
           </label>
         </div>
       </Filter>
-    </div>
+    </motion.div>
   );
 };

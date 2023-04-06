@@ -5,7 +5,7 @@ import { Hero } from '@/features/misc/components/Hero';
 import { Mission } from '@/features/misc/components/Mission';
 import { Newsletter } from '@/features/misc/components/Newsletter';
 
-export const Home = () => (
+export const HomePage = () => (
   <>
     <Hero />
     <Arrivals />

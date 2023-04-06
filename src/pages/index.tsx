@@ -1,3 +1,3 @@
-import { Home } from '@/features/misc/routes/Home';
+import { HomePage } from '@/features/misc/routes/Home';
 
-export default Home;
+export default HomePage;
