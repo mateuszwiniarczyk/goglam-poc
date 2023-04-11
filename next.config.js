@@ -10,6 +10,15 @@ const nextConfig = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/products',
+        destination: '/products/pages/1',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
