@@ -1,0 +1,58 @@
+query GetProductsBySmellVariants($first: Int = 10, $skip: Int = 0) {
+  productSmellVariantsConnection(first: $first, skip: $skip) {
+    aggregate {
+      count
+    }
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+    }
+    edges {
+      node {
+        id
+        name
+        image {
+          url
+        }
+        product {
+          category {
+            name
+          }
+          company {
+            name
+          }
+          name
+          slug
+          productSizeVariants(orderBy: price_ASC, first: 1) {
+            price
+          }
+        }
+      }
+    }
+  }
+}
+
+query GetNewArrivals {
+  collections(where: { name: "just in" }) {
+    name
+    productSmellVariants {
+      name
+      image {
+        url
+      }
+      product {
+        company {
+          name
+        }
+        category {
+          name
+        }
+        name
+        slug
+        productSizeVariants(orderBy: price_ASC, first: 1) {
+          price
+        }
+      }
+    }
+  }
+}

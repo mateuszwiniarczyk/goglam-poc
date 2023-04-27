@@ -5,11 +5,7 @@ import { useRef } from 'react';
 import { Product } from '@/components/Product';
 import { Swiper, SwiperSlide } from '@/components/Swiper';
 import { SectionHeader } from '@/features/misc/components/SectionHeader';
-import ArrivalItem1 from '~/images/arrivals-1.png';
-import ArrivalItem2 from '~/images/arrivals-2.png';
-import ArrivalItem3 from '~/images/arrivals-3.png';
-import ArrivalItem4 from '~/images/arrivals-4.png';
-import ArrivalItem5 from '~/images/arrivals-5.png';
+import { GetNewArrivalsQuery } from '@/generated/graphql';
 
 const swiperBreakpoints = {
   0: {
@@ -29,7 +25,11 @@ const swiperBreakpoints = {
   },
 };
 
-export const Arrivals = () => {
+export const Arrivals = ({
+  data: { collections },
+}: {
+  data: GetNewArrivalsQuery;
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -48,42 +48,31 @@ export const Arrivals = () => {
         href='/products'
         linkLabel='See our products'
       />
+      {collections && collections.length > 0 ? (
+        <Swiper breakpoints={swiperBreakpoints} spaceBetween={20}>
+          {collections[0].productSmellVariants.map((smellVariant) => {
+            if (
+              !smellVariant.product ||
+              !smellVariant.product.company ||
+              !smellVariant.product.category
+            )
+              return;
 
-      <Swiper breakpoints={swiperBreakpoints} spaceBetween={20}>
-        <SwiperSlide>
-          <Product img={ArrivalItem1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem4} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem4} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem5} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Product img={ArrivalItem1} />
-        </SwiperSlide>
-      </Swiper>
+            return (
+              <SwiperSlide key={smellVariant.name}>
+                <Product
+                  company={smellVariant.product.company.name}
+                  name={smellVariant.product.name}
+                  smellVariant={smellVariant.name}
+                  category={smellVariant.product.category.name}
+                  price={smellVariant.product.productSizeVariants[0].price}
+                  image={smellVariant.image.url}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      ) : null}
     </motion.section>
   );
 };

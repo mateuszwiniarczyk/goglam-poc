@@ -1,16 +1,38 @@
+import { InferGetStaticPropsType } from 'next';
+
 import { Approach } from '@/features/misc/components/Approach';
 import { Arrivals } from '@/features/misc/components/Arrivals';
-import { Favourites } from '@/features/misc/components/Favourites';
 import { Hero } from '@/features/misc/components/Hero';
 import { Mission } from '@/features/misc/components/Mission';
 import { Newsletter } from '@/features/misc/components/Newsletter';
+import { GetNewArrivalsDocument } from '@/generated/graphql';
+import { apolloClient } from '@/graphql/apolloClient';
 
-export const HomePage = () => (
+export const getStaticProps = async () => {
+  const { data, error } = await apolloClient.query({
+    query: GetNewArrivalsDocument,
+  });
+
+  if (error) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      newArrivals: data,
+    },
+  };
+};
+
+export const HomePage = ({
+  newArrivals,
+}: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Hero />
-    <Arrivals />
+    <Arrivals data={newArrivals} />
     <Mission />
-    <Favourites />
     <Approach />
     <Newsletter />
   </>
